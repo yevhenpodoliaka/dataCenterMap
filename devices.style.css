@@ -1,15 +1,10 @@
-.devices{
-outline: 1px solid black;
-
-}
-.device{
-    position: relative;
+.device-small,
+.device-medium,
+.device-large{
+      position: absolute;
     width: 35px;
     align-self: center;
-    overflow: hidden;
-}
-.device:nth-child(2){
-    align-self: start;
+    overflow: hidden;  
 }
 
 .mask{
@@ -17,3 +12,72 @@ outline: 1px solid black;
     top: 0;
     left: 0;
 }
+
+#north-america .device-small{
+  top: 10px;
+  left: 90px;
+}
+#north-america .device-medium{
+  top: 30px;
+  left: -30px;
+}
+#north-america .device-large{
+  top:-10px;
+  left: 20px;
+}
+
+#europe .device-small{
+  top: 15px;
+  left: 80px;
+}
+#europe .device-medium{
+  top: -45px;
+  left: 0px;
+}
+#europe .device-large{
+  top: -20px;
+  left: 50px;
+}
+
+#asia .device-small{
+  top: 10px;
+  left: 85px;
+}
+#asia .device-medium{
+  top: 50px;
+  left: 0px;
+}
+#asia .device-large{
+  top: 100px;
+  left: 40px;
+}
+
+#south-america .device-small{
+  top: 0px;
+  left: 20px;
+}
+#south-america .device-medium{
+  top: 50px;
+  left: 0px;
+}
+#south-america .device-large{
+  top: 100px;
+  left: -5px;
+}
+
+
+
+#australia .device-small{
+  top: 0px;
+  left: 25px;
+}
+#australia .device-medium{
+  top: 15px;
+  left: -15px;
+}
+#australia .device-large{
+  top: 35px;
+  left: 45px;
+}
+
+

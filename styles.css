@@ -1,7 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .visually-hidden {
   position: absolute;
@@ -15,96 +15,84 @@
   clip-path: inset(50%);
   margin: -1px;
 }
-body{
-    background-color: gray;
-
+body {
+  background-color: gray;
 }
-main{
-    width: 900px;
-    padding: 20px 10px;
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.info {
+    width: 1000px;
     margin: 0 auto;
-}
-img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.dataCenter{
-width: 20px;
-height: 40px;
-}
-.info{
-    display: flex;
-    gap: 15px;
-  margin-bottom: 50px;
+  display: flex;
+  gap: 15px;
 }
 
-#message{
-    background-color: black;
-    color: white;
-}
-#map{
-    width: 880px;
-    height:500px;
-    position: relative;
-    background-image: url('./img/map.png');
-    background-size: cover;
-    /* background-repeat: no-repeat; */
-    background-position: center;
+#message {
+  background-color: black;
+  color: white;
+  padding: 15px;
 
+}
+#map {
+  margin: 0 auto;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  background-image: url("./img/map.png");
+  background-size: contain;
 }
 
 .continent {
-width: 100px;
-height: 100px;
- display: flex;
- align-items: flex-end;
- justify-content: center;
-}
-#north-america{
-    position: absolute;
-    top: 130px;
-    left: 140px;
-}
-#europe{
 position: absolute;
-    top: 145px;
-    left: 450px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
 }
-#asia{
-position: absolute;
-    top: 140px;
-    left: 600px;
-
+#north-america {
+  top: 180px;
+  left: 180px;
 }
-#south-america{
-    position: absolute;
-    top: 310px;
-    left: 230px;
+#europe {
+  top: 190px;
+  left: 520px;
 }
-#australia{
-    position: absolute;
-    top: 335px;
-    left: 690px;
+#asia {
+  top: 150px;
+  left: 710px;
 }
-
-
-
-
- .continent[data-status="current"] #dataCenter{
-    position: relative;
-    top: 50%;
-    left: 50%;
-width: 15px;
-height: 50px;
-background-color: black;
+#south-america {
+  top: 370px;
+  left: 285px;
+}
+#australia {
+  top: 420px;
+  left: 800px;
 }
 
- .continent[data-status="new"] #dataCenter{
-    position: relative;
-    top: 50%;
-    left: 50%;
-width: 15px;
-height: 50px;
-background-color: white;
+/* .continent[data-status="current"] #dataCenter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 50px;
+  background-color: black;
 }
+
+.continent[data-status="new"] #dataCenter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 50px;
+  background-color: white;
+} */
