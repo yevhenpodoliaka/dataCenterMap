@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./users.style.css" />
+    <link rel="stylesheet" href="./devices.style.css" />
+    <link rel="stylesheet" href="./dataCenter.style.css">
+    <title>Data Center Map</title>
+  </head>
+  <body>
+    <main>
+      <div class="info">
+        <p id="message">
+        Where are you users? Choose the number for every region
+      </p>
+      <button id="next"class= "visually-hidden">next</button>
+      </div>
+    
+      
+      <div id="map">
+        <div id="north-america" class="continent">
+          <div class="users-small"></div>
+          <div class="users-medium"></div>
+          <div class="users-large"></div>
+        </div>
+        <!-- <div class="data-centet"></div> -->
+        <div id="europe" class="continent">
+          <div class="users-small"></div>
+          <div class="users-medium"></div>
+          <div class="users-large"></div>
+        </div>
+        <div id="asia" class="continent">
+          <div class="users-small"></div>
+          <div class="users-medium"></div>
+          <div class="users-large"></div>
+        </div>
+        <div id="south-america" class="continent">
+          <div class="users-small"></div>
+          <div class="users-medium"></div>
+          <div class="users-large"></div>
+        </div>
+        <div id="australia" class="continent">
+          <div class="users-small"></div>
+          <div class="users-medium"></div>
+          <div class="users-large"></div>
+        </div>
+        <canvas id="canvas"></canvas>
+      </div>
+    </main>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

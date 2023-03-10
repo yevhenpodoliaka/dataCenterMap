@@ -1,0 +1,23 @@
+.users-large {
+  width: 20px;
+  height: 48px;
+}
+.users-medium {
+  width: 14px;
+  height: 33px;
+}
+.users-small {
+  width: 12px;
+  height: 29px;
+}
+.users-large,
+.users-medium,
+.users-small {
+  background-image: url("./img/man_empty.png");
+  background-size: cover;
+}
+.users-large:hover,
+.users-medium:hover,
+.users-small:hover {
+  background-image: url("./img/man_filled.png");
+}

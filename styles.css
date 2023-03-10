@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0000);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+body{
+    background-color: gray;
+
+}
+main{
+    width: 900px;
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.dataCenter{
+width: 20px;
+height: 40px;
+}
+.info{
+    display: flex;
+    gap: 15px;
+  margin-bottom: 50px;
+}
+
+#message{
+    background-color: black;
+    color: white;
+}
+#map{
+    width: 880px;
+    height:500px;
+    position: relative;
+    background-image: url('./img/map.png');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+
+}
+
+.continent {
+width: 100px;
+height: 100px;
+ display: flex;
+ align-items: flex-end;
+ justify-content: center;
+}
+#north-america{
+    position: absolute;
+    top: 130px;
+    left: 140px;
+}
+#europe{
+position: absolute;
+    top: 145px;
+    left: 450px;
+}
+#asia{
+position: absolute;
+    top: 140px;
+    left: 600px;
+
+}
+#south-america{
+    position: absolute;
+    top: 310px;
+    left: 230px;
+}
+#australia{
+    position: absolute;
+    top: 335px;
+    left: 690px;
+}
+
+
+
+
+ .continent[data-status="current"] #dataCenter{
+    position: relative;
+    top: 50%;
+    left: 50%;
+width: 15px;
+height: 50px;
+background-color: black;
+}
+
+ .continent[data-status="new"] #dataCenter{
+    position: relative;
+    top: 50%;
+    left: 50%;
+width: 15px;
+height: 50px;
+background-color: white;
+}

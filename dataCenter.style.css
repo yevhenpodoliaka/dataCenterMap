@@ -1,0 +1,40 @@
+.data-center{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+}
+.location,
+.location-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+/* germany singapore north-america  south-america */
+.data-center[data-location="singapore"]{
+top: 190px;
+left: 60px;
+}
+.data-center[data-location="germany"]{
+top: 45px;
+left: -35px;
+}
+.data-center[data-location="north-america"]{
+top: 100px;
+left: 75px;
+
+}
+
+.data-center[data-location="south-america"]{
+top: 100px;
+left: -10px;
+
+}
+
+.location-hover{
+    opacity: 0;
+}
+.data-center:hover .location-hover{
+opacity: 1;
+}

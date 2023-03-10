@@ -1,0 +1,19 @@
+.devices{
+outline: 1px solid black;
+
+}
+.device{
+    position: relative;
+    width: 35px;
+    align-self: center;
+    overflow: hidden;
+}
+.device:nth-child(2){
+    align-self: start;
+}
+
+.mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
