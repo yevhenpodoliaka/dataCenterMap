@@ -11,17 +11,17 @@ import { GLOBAL_STATE } from "../main.js";
 export default function chooseNumberUsers(e) {
   const regionName = e.target.parentNode.getAttribute("id");
   
-  if (e.target.classList.contains("users-small")) {
+  if (e.target.classList.contains("user-small")) {
     e.target.parentNode.innerHTML = laptopMarkup();
 
     GLOBAL_STATE.addUsers(regionName)
   }
-  if (e.target.classList.contains("users-medium")) {
+  if (e.target.classList.contains("user-medium")) {
     e.target.parentNode.innerHTML = laptopAndSmartphoneMarkup();
 
     GLOBAL_STATE.addUsers(regionName);
   }
-  if (e.target.classList.contains("users-large")) {
+  if (e.target.classList.contains("user-large")) {
     e.target.parentNode.innerHTML = laptopSmartphoneMobileMarkup();
 
     GLOBAL_STATE.addUsers(regionName);

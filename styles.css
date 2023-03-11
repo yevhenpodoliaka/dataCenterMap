@@ -17,6 +17,8 @@
 }
 body {
   background-color: gray;
+ font-family: 'Roboto', sans-serif;
+ font-size: 14px;
 }
 main {
   width: 1200px;
@@ -61,9 +63,9 @@ button{
 .continent {
 position: absolute;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  gap: 4px;
+  /* gap: 4px; */
 }
 #north-america {
   top: 180px;

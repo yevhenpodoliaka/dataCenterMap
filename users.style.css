@@ -1,23 +1,82 @@
-.users-large {
-  width: 20px;
-  height: 48px;
+.user-small,
+.user-medium,
+.user-large{
+position: relative;
 }
-.users-medium {
-  width: 14px;
-  height: 33px;
+.user-small:hover img,
+.user-medium:hover img,
+.user-large:hover img{
+     position: absolute;
+   pointer-events: none;
 }
-.users-small {
-  width: 10px;
-  height: 28px;
+
+.user-small:hover .user-hover,
+.user-medium:hover .user-hover,
+.user-large:hover .user-hover{
+    opacity: 1;
 }
-.users-large,
-.users-medium,
-.users-small {
-  background-image: url("./img/man_empty.png");
-  background-size: cover;
+
+.user-hover{
+    opacity: 0;
+    pointer-events: none;
 }
-.users-large:hover,
-.users-medium:hover,
-.users-small:hover {
-  background-image: url("./img/man_filled.png");
+
+
+.user-small{
+width: 10px;
+height: 15px;
+}
+.user-small::before{
+  display: block;
+  content: "200k";
+  padding: 4px;
+  background-color: blue;
+  color: antiquewhite;
+  position: absolute;
+  top: -25px;
+  left: -40px;
+  opacity: 0;
+  border-radius: 8px;
+}
+ .user-small:hover::before{
+  opacity: 1;
+}
+.user-medium{
+width: 12px;
+height: 20px;
+}
+.user-medium::before{
+  display: block;
+  content: "500k";
+  padding: 4px;
+  background-color: blue;
+  color: antiquewhite;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  opacity: 0;
+  border-radius: 8px;
+}
+ .user-medium:hover::before{
+  opacity: 1;
+}
+.user-large{
+width: 15px;
+ height: 35px;
+}
+
+.user-large::before{
+  display: block;
+  content: "1M";
+  padding: 4px;
+  background-color: blue;
+  color: antiquewhite;
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  opacity: 0;
+  border-radius: 8px;
+}
+ .user-large:hover::before{
+  opacity: 1;
 }

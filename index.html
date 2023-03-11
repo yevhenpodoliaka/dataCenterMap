@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./users.style.css" />
     <link rel="stylesheet" href="./devices.style.css" />
-    <link rel="stylesheet" href="./dataCenter.style.css">
+    <link rel="stylesheet" href="./dataCenter.style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Data Center Map</title>
   </head>
@@ -15,46 +18,86 @@
     <main>
       <div class="info">
         <p id="message">
-        Where are you users? Choose the number for every region
-      </p>
-      <button id="next"class= "visually-hidden">next</button>
+          Where are you users? Choose the number for every region
+        </p>
+        <button id="next" class="visually-hidden">next</button>
       </div>
-    
+
       <div id="map">
         <div id="north-america" class="continent">
-          <div class="users-small"></div>
-          <div class="users-medium"></div>
-          <div class="users-large"></div>
+          <div class="user-small">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user-medium">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user-large">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
         </div>
         <div id="europe" class="continent">
-          <div class="users-small"></div>
-          <div class="users-medium"></div>
-          <div class="users-large"></div>
+          <div class="user user-small">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-medium">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-large">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
         </div>
         <div id="asia" class="continent">
-          <div class="users-small"></div>
-          <div class="users-medium"></div>
-          <div class="users-large"></div>
+          <div class="user user-small">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-medium">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-large">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
         </div>
         <div id="south-america" class="continent">
-          <div class="users-small"></div>
-          <div class="users-medium"></div>
-          <div class="users-large"></div>
+          <div class="user user-small">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-medium">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-large">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
         </div>
         <div id="australia" class="continent">
-          <div class="users-small"></div>
-          <div class="users-medium"></div>
-          <div class="users-large"></div>
+          <div class="user user-small">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-medium">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
+          <div class="user user-large">
+            <img class="user-img" src="./img/man_empty.png" alt="man" />
+            <img class="user-hover" src="./img/man_filled.png" alt="man" />
+          </div>
         </div>
-        
-       <canvas id="canvas" ></canvas>
-      </div>
-        
-    </main>
- 
-  
- 
 
+        <canvas id="canvas"></canvas>
+      </div>
+    </main>
 
     <script src="./js/main.js" type="module"></script>
   </body>
