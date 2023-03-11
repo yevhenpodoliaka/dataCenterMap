@@ -10,4 +10,9 @@ export default {
 
   nextBtn: document.querySelector("#next"),
   users: document.querySelector(".users"),
+
+
+
+
+  
 };

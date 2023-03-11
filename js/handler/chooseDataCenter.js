@@ -1,8 +1,8 @@
 import refs from "../refs.js"
 import dataCenterMarkup from "../markup/dataCenterMarkup.js";
 import onStartBtnClick from "./onStartBtnClick.js";
+import { GLOBAL_STATE } from "../main.js";
 
-let newCenter = 0;
 
 export default function chooseDataCenter(e) {
   const current = document.querySelector('[data-status="current"]');
@@ -12,10 +12,11 @@ export default function chooseDataCenter(e) {
       e.target.setAttribute("data-status", "new");
       e.target.innerHTML = dataCenterMarkup("new");
       e.target.style.width = "50px";
-      newCenter+=1;
-     if (newCenter === 2) {
+      GLOBAL_STATE.addNewDataCenter(e.target.dataset.location)
+
+     if (GLOBAL_STATE.newDataCenter.length === 2) {
        refs.nextBtn.disabled = false;
-       refs.nextBtn.addEventListener("click",onStartBtnClick)
+       refs.nextBtn.addEventListener("click", onStartBtnClick);
      }
   
     } else {
@@ -24,7 +25,8 @@ export default function chooseDataCenter(e) {
       e.target.style.width = "50px"
       refs.message.textContent = "Choose minimum two additional spots for Byte Cloud and press"
       refs.nextBtn.classList.remove("visually-hidden");
-      refs.nextBtn.disabled= true
+      refs.nextBtn.disabled = true
+      GLOBAL_STATE.addCurrentDataCenter(e.target.dataset.location);
     }
   }
 }

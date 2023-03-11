@@ -1,5 +1,5 @@
 export default function laptopAndSmartphoneMarkup() {
-    return `<div class="device-small>
+  return `<div class="device-small">
             <img src="./img/small.png" alt="">
             <img class="mask" src="./img/small_mask.png" alt="">
           </div>

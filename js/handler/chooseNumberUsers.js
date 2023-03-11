@@ -4,30 +4,34 @@ import laptopSmartphoneMobileMarkup from "../markup/laptopSmartphoneMobileMarkup
 import dataCenterRender from "../dataCenterRender.js";
 import onNextBtnClick from "./onNextBtnClick.js";
 import refs from "../refs.js";
+import { GLOBAL_STATE } from "../main.js";
 
-const selectedRegionsList = [];
+
 
 export default function chooseNumberUsers(e) {
   const regionName = e.target.parentNode.getAttribute("id");
-
+  
   if (e.target.classList.contains("users-small")) {
     e.target.parentNode.innerHTML = laptopMarkup();
-    selectedRegionsList.push(regionName);
+
+    GLOBAL_STATE.addUsers(regionName)
   }
   if (e.target.classList.contains("users-medium")) {
     e.target.parentNode.innerHTML = laptopAndSmartphoneMarkup();
-    selectedRegionsList.push(regionName);
+
+    GLOBAL_STATE.addUsers(regionName);
   }
   if (e.target.classList.contains("users-large")) {
     e.target.parentNode.innerHTML = laptopSmartphoneMobileMarkup();
-    selectedRegionsList.push(regionName);
+
+    GLOBAL_STATE.addUsers(regionName);
   }
 
-  if (selectedRegionsList.length > 0) {
+  if (GLOBAL_STATE.users.length > 0) {
     refs.nextBtn.classList.remove("visually-hidden");
     refs.nextBtn.addEventListener("click", onNextBtnClick);
   }
-  if (selectedRegionsList.length === 5) {
+  if (GLOBAL_STATE.users.length === 5) {
     refs.map.removeEventListener("click", chooseNumberUsers);
     refs.message.textContent =
       "Where is Your Data? Choose one spot for Object Storage system";
