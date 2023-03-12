@@ -14,11 +14,11 @@ export default function dataCenterRender() {
 
   refs.asia.insertAdjacentHTML(
     "beforeend",
-    dataCenterPositionsMarkup("singapore")
+    dataCenterPositionsMarkup("asia")
   );
   refs.europe.insertAdjacentHTML(
     "beforeend",
-    dataCenterPositionsMarkup("germany")
+    dataCenterPositionsMarkup("europe")
   );
 
   refs.map.addEventListener("click", chooseDataCenter);

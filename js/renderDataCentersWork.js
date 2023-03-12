@@ -1,76 +1,54 @@
 import { GLOBAL_STATE } from "./main.js";
 import { ctx } from "./helpers/drawParabola.js";
-import calculateCoordinates from "./helpers/calculateCoordinates.js";
-import drawParabola from "./helpers/drawParabola.js";
-import renderNewDataCenter from "./renderNewDataCenterWork.js";
+import renderCurrentDataCenterWork from "./renderCurrentDataCenterWork.js";
+import renderNewDataCenterWork from "./renderNewDataCenterWork.js";
 export default function renderLatency() {
   const { users } = GLOBAL_STATE;
 
-  const points = Array.from(document.querySelectorAll(".point"));
-  const res = points.map((i) => {
-    return calculateCoordinates(i.getBoundingClientRect());
-  });
-
-  const currentCenter = calculateCoordinates(
-    document.querySelector("[data-status='current']").getBoundingClientRect()
-  );
-
-  res.forEach((i) => drawParabola(currentCenter.x, currentCenter.y, i.x, i.y));
-
-  setTimeout(() => {
-    ctx.clearRect(0, 0, 1000, 600);
-     
-  if (
-    users.includes("asia") &&
-    document.querySelector("[data-status='new'][data-location='singapore']")
-  ) {
-    renderNewDataCenter("singapore", "asia");
+    if (
+      users.includes("asia") &&
+      document.querySelector("[data-location='asia']")
+    ) {
+      renderNewDataCenterWork("asia", "asia");
     }
-    
+
     if (
       users.includes("australia") &&
-      document.querySelector("[data-status='new'][data-location='singapore']")
+      document.querySelector("[data-location='asia']")
     ) {
-      renderNewDataCenter("singapore", "australia");
+      renderNewDataCenterWork("asia", "australia");
     }
     if (
       users.includes("europe") &&
-      document.querySelector("[data-status='new'][data-location='germany']")
+      document.querySelector("[data-location='europe']")
     ) {
-      renderNewDataCenter("germany", "europe");
+      renderNewDataCenterWork("europe", "europe");
     }
     if (
       users.includes("south-america") &&
       document.querySelector(
-        "[data-status='new'][data-location='south-america']"
+        "[data-location='south-america']"
       )
     ) {
-      renderNewDataCenter("south-america", "south-america");
+      renderNewDataCenterWork("south-america", "south-america");
     }
-        if (
-          users.includes("north-america") &&
-          document.querySelector(
-            "[data-status='new'][data-location='north-america']"
-          )
-        ) {
-          renderNewDataCenter("north-america", "north-america");
-        }
-  }, 4000);
+    if (
+      users.includes("north-america") &&
+      document.querySelector(
+        "[data-location='north-america']"
+      )
+    ) {
+      renderNewDataCenterWork("north-america", "north-america");
+    }
 
-
-
-
-
-
-
-
-
+  setTimeout(() => {
+    ctx.clearRect(0, 0, 1000, 600);
+renderCurrentDataCenterWork()
+  }, 8000);
 }
 
-
-
 // let start = Date.now(); // remember start time
-  
+
 //   let time = 5000 //100%
 // // time = 100%
 // //  interval time /20
@@ -80,13 +58,12 @@ export default function renderLatency() {
 //   let timePassed = Date.now() - start;
 // // console.log("timePassed", timePassed);
 //   if (timePassed >= time) {
-//     clearInterval(timer); 
+//     clearInterval(timer);
 //     return;
 //   }
 
 //   draw(timePassed);
 // },time/20);
-
 
 //   function draw(timePassed) {
 //   console.log("draw", Date.now());

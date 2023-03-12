@@ -1,0 +1,25 @@
+.info-card {
+  position: absolute;
+  padding: 8px;
+  background-color: #f1f1f1;
+}
+#north-america .info-card {
+  top: 120px;
+  left: 20px;
+}
+#europe .info-card {
+  top: 75px;
+  left: 50px;
+}
+#asia .info-card {
+  top: 115px;
+  left: 20px;
+}
+#south-america .info-card {
+  top: 70px;
+  left: -50px;
+}
+#australia .info-card {
+  top: 95px;
+  left: -5px;
+}

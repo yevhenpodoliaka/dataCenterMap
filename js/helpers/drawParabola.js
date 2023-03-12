@@ -6,7 +6,7 @@ canvas.style.position="absolute"
 canvas.style.top="0px"
 canvas.style.left="0px"
 
-export default function drawParabola(startX, startY, endX, endY) {
+export default function drawParabola(startX, startY, endX, endY,color="red") {
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   // ctx.arc(start.x, start.y, end.x, end.y, Math.PI, false); // Mouth (clockwise)
@@ -19,7 +19,7 @@ export default function drawParabola(startX, startY, endX, endY) {
     endX,
     endY
   );
-  ctx.strokeStyle = "red";
+  ctx.strokeStyle = color;
   ctx.stroke();
 }
 

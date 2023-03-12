@@ -11,12 +11,12 @@
     left: 0;
     pointer-events: none;
 }
-/* germany singapore north-america  south-america */
-.data-center[data-location="singapore"]{
+
+.data-center[data-location="asia"]{
 top: 300px;
 left: 100px;
 }
-.data-center[data-location="germany"]{
+.data-center[data-location="europe"]{
 top: 130px;
 left: 40px;
 }

@@ -1,12 +1,20 @@
 import calculateCoordinates from "./helpers/calculateCoordinates.js";
 import drawParabola from "./helpers/drawParabola.js";
-
+import { GLOBAL_STATE } from "./main.js";
+import latencyInfoCardMarkup from "./markup/latencyInfoCardMarkup.js"
 
 // from = data-location="nameNewLocation"
 
 //to = idSelector of continent without "#"
 
-export default function renderNewDataCenterWork(from,to) {
+
+export default function renderNewDataCenterWork(from, to) {
+  const { centres } = GLOBAL_STATE
+  
+  const { latencyTime } = centres.find((i) => i.id === from);
+
+  
+
   const startPoint = calculateCoordinates(
     document
       .querySelector(`[data-location=${from}]`)
@@ -20,6 +28,14 @@ export default function renderNewDataCenterWork(from,to) {
   });
 
   usersPoints.forEach((i) =>
-    drawParabola(startPoint.x, startPoint.y, i.x, i.y)
+    drawParabola(startPoint.x, startPoint.y, i.x, i.y,"blue")
   );
+  document
+    .querySelector(`#${to}`)
+    .insertAdjacentHTML(
+      "beforeend",
+      latencyInfoCardMarkup(latencyTime[to])
+    );
+ 
+
 }
