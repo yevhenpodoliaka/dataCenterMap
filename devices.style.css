@@ -1,83 +1,86 @@
 .device-small,
 .device-medium,
-.device-large{
-      position: relative;
-    width: 35px;
-    align-self: center;
-    overflow: hidden;  
+.device-large {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 35px;
 }
 
-.mask{
-    position: absolute;
-    top: 0;
-    left: 0;
+.device-small img,
+.device-medium img,
+.device-large img {
+  height: 100%;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  filter:  invert(50%);
+
 }
 
-#north-america .device-small{
+#north-america .device-small {
+  top: 130px;
+  left: 120px;
+}
+#north-america .device-medium {
   top: 100px;
-  left: 100px;
+  left: 180px;
 }
-#north-america .device-medium{
-  top: 85px;
-  left: 220px;
-}
-#north-america .device-large{
-  top:0px;
+#north-america .device-large {
+  top: 50px;
   left: 0px;
 }
 
-#europe .device-small{
+#europe .device-small {
   top: 150px;
   left: 120px;
 }
-#europe .device-medium{
-  top: 0px;
-  left: 90px;
+#europe .device-medium {
+  top: 30px;
+  left: 40px;
 }
-#europe .device-large{
-  top: 0px;
-  left:150px;
+#europe .device-large {
+  top: 70px;
+  left: 50px;
 }
 
-#asia .device-small{
-  top: 10px;
-  left: 85px;
-}
-#asia .device-medium{
+#asia .device-small {
   top: 50px;
-  left: 150px;
+  left: 50px;
 }
-#asia .device-large{
+#asia .device-medium {
   top: 100px;
-  left: 40px;
+  left: 100px;
+}
+#asia .device-large {
+  top: 150px;
+  left: -50px;
 }
 
-#south-america .device-small{
+#south-america .device-small {
   top: 20px;
-  left: 40px;
+  left: 20px;
 }
-#south-america .device-medium{
-  top: 50px;
-  left: 70px;
+#south-america .device-medium {
+  top: 60px;
+  left: 30px;
 }
-#south-america .device-large{
+#south-america .device-large {
   top: 80px;
   left: 25px;
 }
 
-
-
-#australia .device-small{
-  top: 30px;
-  left: 55px;
-}
-#australia .device-medium{
-  top: 15px;
+#australia .device-small {
+  top: 60px;
   left: 10px;
 }
-#australia .device-large{
-  top: 15px;
-  left: 75px;
+#australia .device-medium {
+  top: 35px;
+  left: 20px;
 }
-
-
+#australia .device-large {
+  top: 85px;
+  left: 5px;
+}

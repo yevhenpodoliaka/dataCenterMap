@@ -4,7 +4,7 @@ import chooseNumberUsers from "./chooseNumberUsers.js";
 
 export default function onNextBtnClick() { 
     refs.map.removeEventListener("click", chooseNumberUsers); 
-    console.log(refs.continents);
+
    refs.continents.forEach((i) =>
     i.firstElementChild.classList.contains("user-small")?
     i.innerHTML = "" : i)
