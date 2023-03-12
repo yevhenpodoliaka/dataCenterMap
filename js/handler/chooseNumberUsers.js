@@ -10,7 +10,7 @@ import { GLOBAL_STATE } from "../main.js";
 
 export default function chooseNumberUsers(e) {
   const regionName = e.target.parentNode.getAttribute("id");
-  
+
   if (e.target.classList.contains("user-small")) {
     e.target.parentNode.innerHTML = laptopMarkup();
 

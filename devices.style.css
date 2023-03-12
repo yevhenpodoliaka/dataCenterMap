@@ -1,7 +1,7 @@
 .device-small,
 .device-medium,
 .device-large{
-      position: absolute;
+      position: relative;
     width: 35px;
     align-self: center;
     overflow: hidden;  
@@ -14,29 +14,29 @@
 }
 
 #north-america .device-small{
-  top: 10px;
-  left: 90px;
+  top: 100px;
+  left: 100px;
 }
 #north-america .device-medium{
-  top: 30px;
-  left: -30px;
+  top: 85px;
+  left: 220px;
 }
 #north-america .device-large{
-  top:-10px;
-  left: 20px;
+  top:0px;
+  left: 0px;
 }
 
 #europe .device-small{
-  top: 15px;
-  left: 80px;
+  top: 150px;
+  left: 120px;
 }
 #europe .device-medium{
-  top: -45px;
-  left: 0px;
+  top: 0px;
+  left: 90px;
 }
 #europe .device-large{
-  top: -20px;
-  left: 50px;
+  top: 0px;
+  left:150px;
 }
 
 #asia .device-small{
@@ -45,7 +45,7 @@
 }
 #asia .device-medium{
   top: 50px;
-  left: 0px;
+  left: 150px;
 }
 #asia .device-large{
   top: 100px;
@@ -53,31 +53,31 @@
 }
 
 #south-america .device-small{
-  top: 0px;
-  left: 20px;
+  top: 20px;
+  left: 40px;
 }
 #south-america .device-medium{
   top: 50px;
-  left: 0px;
+  left: 70px;
 }
 #south-america .device-large{
-  top: 100px;
-  left: -5px;
+  top: 80px;
+  left: 25px;
 }
 
 
 
 #australia .device-small{
-  top: 0px;
-  left: 25px;
+  top: 30px;
+  left: 55px;
 }
 #australia .device-medium{
   top: 15px;
-  left: -15px;
+  left: 10px;
 }
 #australia .device-large{
-  top: 35px;
-  left: 45px;
+  top: 15px;
+  left: 75px;
 }
 
 

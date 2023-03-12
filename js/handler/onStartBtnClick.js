@@ -1,4 +1,5 @@
 import { GLOBAL_STATE } from "../main.js";
+import renderLatency from "../renderLatency.js";
 
 const create = (continent) => {
   return {
@@ -14,6 +15,7 @@ export default function onStartBtnClick() {
   const usersRef = users.map((u) => {
     return create(u);
   });
+  renderLatency()
 
 }
 

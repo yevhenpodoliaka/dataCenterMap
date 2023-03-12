@@ -1,9 +1,12 @@
 var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+export const ctx = canvas.getContext("2d");
 canvas.width = 1000;
 canvas.height = 600;
+canvas.style.position="absolute"
+canvas.style.top="0px"
+canvas.style.left="0px"
 
-export default function drawParabola(startX, startY, endX, EndY) {
+export default function drawParabola(startX, startY, endX, endY) {
   ctx.beginPath();
   ctx.moveTo(startX, startY);
   // ctx.arc(start.x, start.y, end.x, end.y, Math.PI, false); // Mouth (clockwise)
@@ -12,9 +15,9 @@ export default function drawParabola(startX, startY, endX, EndY) {
     // Math.min(start.y, end.y) -
     //   Math.abs(start.x - end.x) ** 2 / (4 * Math.abs(start.y - end.y)),
     (startX + endX) / 2,
-    EndY / 5,
+    endY / 5,
     endX,
-    EndY
+    endY
   );
   ctx.strokeStyle = "red";
   ctx.stroke();

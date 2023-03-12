@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+#canvas{
+  pointer-events: none;
+}
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -58,50 +61,39 @@ button{
   position: relative;
   background-image: url("./img/map.png");
   background-size: contain;
+
+
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px;
 }
 
 .continent {
-position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* gap: 4px; */
+position: relative;
 }
 #north-america {
-  top: 180px;
-  left: 180px;
+  width: 250px;
+  height: 250px;
 }
 #europe {
-  top: 190px;
-  left: 520px;
+    width: 200px;
+  height: 200px;
+  margin-left: 150px;
 }
 #asia {
-  top: 150px;
-  left: 710px;
+    width: 250px;
+  height: 250px;
 }
 #south-america {
-  top: 370px;
-  left: 285px;
+    width: 110px;
+  height: 200px;
+  margin-left: 215px;
 }
 #australia {
-  top: 420px;
-  left: 800px;
+margin:0 50px 0 auto ;
+    width: 130px;
+  height: 130px;
 }
 
-/* .continent[data-status="current"] #dataCenter {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 50px;
-  background-color: black;
-}
 
-.continent[data-status="new"] #dataCenter {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 50px;
-  background-color: white;
-} */
