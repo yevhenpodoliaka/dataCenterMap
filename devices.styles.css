@@ -3,30 +3,43 @@
 .device-large {
   display: inline-block;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
+}
+
+.device-small {
+  width: 33px;
+  height: 35px;
+}
+
+.device-medium {
+  width: 23px;
+  height: 35px;
+}
+.device-large {
+  width: 18px;
+  height: 35px;
+}
+
+.device {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 35px;
 }
-.device-window{
-  position: absolute;
-  /* overflow: hidden; */
-  top: 0;
-  left: 0;
-  outline: 1px solid red;
-  width: 35px;
-}
-.device-small img,
-.device-medium img,
-.device-large img {
+.device img,
+.device img,
+.device img {
   height: 100%;
 }
 .mask {
   position: absolute;
   top: 0;
-  left: 0; 
-  filter:  invert(50%);
+  left: 0;
 }
 
-#north-america .device-small {
+#north-america .device-small{
   top: 130px;
   left: 120px;
 }
@@ -74,19 +87,19 @@
   left: 30px;
 }
 #south-america .device-large {
-  top: 80px;
-  left: 25px;
+  top: 125px;
+  left: -35px;
 }
 
 #australia .device-small {
-  top: 60px;
-  left: 10px;
+  top: 70px;
+  left: 20px;
 }
 #australia .device-medium {
   top: 35px;
-  left: 20px;
+  left: 30px;
 }
 #australia .device-large {
   top: 85px;
-  left: 5px;
+  left: 25px;
 }
