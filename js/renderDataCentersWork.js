@@ -2,9 +2,12 @@ import { GLOBAL_STATE } from "./main.js";
 import { ctx } from "./helpers/drawParabola.js";
 import renderCurrentDataCenterWork from "./renderCurrentDataCenterWork.js";
 import renderNewDataCenterWork from "./renderNewDataCenterWork.js";
-export default function renderLatency() {
-  const { users } = GLOBAL_STATE;
+import refs from "./refs.js";
 
+export default function renderDataCentresWork() {
+  const { users } = GLOBAL_STATE;
+  refs.message.style.opacity=0
+  refs.nextBtn.style.opacity=0
     if (
       users.includes("asia") &&
       document.querySelector("[data-location='oceania']")

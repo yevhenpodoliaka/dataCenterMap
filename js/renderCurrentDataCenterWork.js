@@ -2,11 +2,13 @@ import calculateCoordinates from "./helpers/calculateCoordinates.js";
 import drawParabola from "./helpers/drawParabola.js";
 import { GLOBAL_STATE } from "./main.js";
 import animationLatency from "./helpers/animation.js";
-// import renderInfoCard from "./renderInfoCard.js";
+import resultTableMarkup from "./markup/resultTableMarkup.js";
+
 
 export default function renderCurrentDataCenterWork() {
   const { currentDataCenter, users } = GLOBAL_STATE;
-  
+
+
   const points = Array.from(document.querySelectorAll(".point")).map((i) => {
     return calculateCoordinates(i.getBoundingClientRect());
   });
@@ -47,6 +49,16 @@ export default function renderCurrentDataCenterWork() {
 
   
   users.forEach((i) => animationLatency(currentDataCenter.latencyTime[i], i));
-  
+
+  const time =Math.max(...Object.values(currentDataCenter.latencyTime)); 
+
+  setTimeout(() => {
+    document
+      .querySelector("body")
+      .insertAdjacentHTML("beforeend", resultTableMarkup());
+    const resetBtn = document.querySelector(".resetBtn");
+    resetBtn.addEventListener("click", () => document.location.reload());
+  }, time);
+
 }
    
