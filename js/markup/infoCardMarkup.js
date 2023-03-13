@@ -1,5 +1,4 @@
-export default function infoCardMarkup(time) {
-  return `<div class="info-card">
-  <p>Latency : ${time/1000} sec.</p>
-</div>`;
+
+export default function infoCardMarkup(text) {
+    return` <p class="info-card">${text}</p>`
 }

@@ -1,8 +1,8 @@
 import calculateCoordinates from "./helpers/calculateCoordinates.js";
 import drawParabola from "./helpers/drawParabola.js";
 import { GLOBAL_STATE } from "./main.js";
-import infoCardMarkup from "./markup/infoCardMarkup.js";
 import animationLatency from "./helpers/animation.js";
+import infoCardMarkup from "./markup/infoCardMarkup.js";
 
 // from = data-location="nameNewLocation"
 
@@ -12,7 +12,7 @@ import animationLatency from "./helpers/animation.js";
 export default function renderNewDataCenterWork(from, to) {
   const { centres } = GLOBAL_STATE
   
-  const { latencyTime } = centres.find((i) => i.id === from);
+  const { latencyTime, downloadTime } = centres.find((i) => i.id === from);
 
   const startPoint = calculateCoordinates(
     document
@@ -29,11 +29,21 @@ export default function renderNewDataCenterWork(from, to) {
   usersPoints.forEach((i) =>
     drawParabola(startPoint.x, startPoint.y, i.x, i.y,"blue")
   );
+
+
+
   document
     .querySelector(`#${to}`)
-    .insertAdjacentHTML("beforeend", infoCardMarkup(latencyTime[to]));
+    .insertAdjacentHTML("beforeend", infoCardMarkup(`Latency ${latencyTime[to]} sec.`));
   
+  setTimeout(() => {
+     document.querySelector(
+       `#${to} .info-card`
+     ).textContent = `Download ${downloadTime[to]} sec.`;
+  }, latencyTime[to]/2);
   
+
+
 animationLatency(latencyTime[to],to);
 
 }
