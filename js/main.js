@@ -3,9 +3,9 @@ import chooseNumberUsers from "./handler/chooseNumberUsers.js";
 refs.map.addEventListener("click", chooseNumberUsers);
 
 
-const asia = {
-  id: "asia",
-  name: "Asia",
+const oceania = {
+  id: "oceania",
+  name: "Oceania",
   latencyTime: {
     asia:3000,
     australia: 5000,
@@ -77,7 +77,7 @@ const southAmerica = {
 };
 
 export const GLOBAL_STATE = {
-  centres: [asia, europe, northAmerica, southAmerica],
+  centres: [oceania, europe, northAmerica, southAmerica],
   users: [],
   currentDataCenter: null,
   newDataCenter: [],
@@ -93,7 +93,6 @@ export const GLOBAL_STATE = {
     const res = this.centres.find((i) => i.id === dataCenter);
     this.newDataCenter.push(res);
   },
-
 };
 
 

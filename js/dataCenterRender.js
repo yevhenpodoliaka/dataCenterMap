@@ -14,7 +14,7 @@ export default function dataCenterRender() {
 
   refs.asia.insertAdjacentHTML(
     "beforeend",
-    dataCenterPositionsMarkup("asia")
+    dataCenterPositionsMarkup("oceania")
   );
   refs.europe.insertAdjacentHTML(
     "beforeend",

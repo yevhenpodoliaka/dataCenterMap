@@ -12,7 +12,7 @@
     pointer-events: none;
 }
 
-.data-center[data-location="asia"]{
+.data-center[data-location="oceania"]{
 top: 300px;
 left: 100px;
 }

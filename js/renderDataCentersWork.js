@@ -7,16 +7,16 @@ export default function renderLatency() {
 
     if (
       users.includes("asia") &&
-      document.querySelector("[data-location='asia']")
+      document.querySelector("[data-location='oceania']")
     ) {
-      renderNewDataCenterWork("asia", "asia");
+      renderNewDataCenterWork("oceania", "asia");
     }
 
     if (
       users.includes("australia") &&
-      document.querySelector("[data-location='asia']")
+      document.querySelector("[data-location='oceania']")
     ) {
-      renderNewDataCenterWork("asia", "australia");
+      renderNewDataCenterWork("oceania", "australia");
     }
     if (
       users.includes("europe") &&
