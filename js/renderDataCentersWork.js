@@ -43,8 +43,13 @@ export default function renderLatency() {
 
   setTimeout(() => {
     ctx.clearRect(0, 0, 1000, 600);
-renderCurrentDataCenterWork()
-  }, 8000);
+    document
+      .querySelectorAll(".mask")
+      .forEach(
+        (e) => (e.style.width = 100 + "%")
+      );
+    renderCurrentDataCenterWork()
+  }, 5000);
 }
 
 // let start = Date.now(); // remember start time

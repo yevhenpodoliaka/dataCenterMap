@@ -1,10 +1,11 @@
 import calculateCoordinates from "./helpers/calculateCoordinates.js";
 import drawParabola from "./helpers/drawParabola.js";
 import { GLOBAL_STATE } from "./main.js";
+import animationLatency from "./helpers/animation.js";
 
 export default function renderCurrentDataCenterWork() {
-  const { centres, currentDataCenter } = GLOBAL_STATE;
-
+  const { currentDataCenter, users } = GLOBAL_STATE;
+  
   const points = Array.from(document.querySelectorAll(".point")).map((i) => {
     return calculateCoordinates(i.getBoundingClientRect());
   });
@@ -21,7 +22,10 @@ export default function renderCurrentDataCenterWork() {
     .forEach(
       (i) =>
         (i.textContent = `Latency :${
-          currentDataCenter.latencyTime[i.parentNode.getAttribute("id")]
-        }`)
-    );
+          currentDataCenter.latencyTime[i.parentNode.getAttribute("id")]/1000
+        } sec.`)
+  );
+  
+  users.forEach((i) => animationLatency(currentDataCenter.latencyTime[i], i));
+  
 }

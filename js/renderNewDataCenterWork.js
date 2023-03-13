@@ -1,7 +1,8 @@
 import calculateCoordinates from "./helpers/calculateCoordinates.js";
 import drawParabola from "./helpers/drawParabola.js";
 import { GLOBAL_STATE } from "./main.js";
-import latencyInfoCardMarkup from "./markup/latencyInfoCardMarkup.js"
+import infoCardMarkup from "./markup/infoCardMarkup.js";
+import animationLatency from "./helpers/animation.js";
 
 // from = data-location="nameNewLocation"
 
@@ -12,8 +13,6 @@ export default function renderNewDataCenterWork(from, to) {
   const { centres } = GLOBAL_STATE
   
   const { latencyTime } = centres.find((i) => i.id === from);
-
-  
 
   const startPoint = calculateCoordinates(
     document
@@ -32,10 +31,38 @@ export default function renderNewDataCenterWork(from, to) {
   );
   document
     .querySelector(`#${to}`)
-    .insertAdjacentHTML(
-      "beforeend",
-      latencyInfoCardMarkup(latencyTime[to])
-    );
- 
+    .insertAdjacentHTML("beforeend", infoCardMarkup(latencyTime[to]));
+  
+  
+animationLatency(latencyTime[to],to);
 
 }
+
+
+
+  // let start = Date.now();
+
+  // let time = latencyTime; //100%
+  // // time = 100%
+  // //  interval time /20
+  // //step =5%
+  // let timer = setInterval(function () {
+  //   let timePassed = Date.now() - start;
+  //   // console.log("timePassed", timePassed);
+  //   if (timePassed >= time) {
+  //     clearInterval(timer);
+  //     return;
+  //   }
+
+  //   draw(timePassed);
+  // }, time / 20);
+
+  // function draw(timePassed) {
+  //   console.log("draw", Date.now());
+  //   document
+  //     .querySelectorAll(".mask")
+  //     .forEach(
+  //       (e) => (e.style.width = ((time - timePassed) / time) * 100 + "%")
+  //     );
+  // }
+ 

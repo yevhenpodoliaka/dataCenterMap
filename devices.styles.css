@@ -3,10 +3,17 @@
 .device-large {
   display: inline-block;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 35px;
 }
-
+.device-window{
+  position: absolute;
+  /* overflow: hidden; */
+  top: 0;
+  left: 0;
+  outline: 1px solid red;
+  width: 35px;
+}
 .device-small img,
 .device-medium img,
 .device-large img {
@@ -17,7 +24,6 @@
   top: 0;
   left: 0; 
   filter:  invert(50%);
-
 }
 
 #north-america .device-small {

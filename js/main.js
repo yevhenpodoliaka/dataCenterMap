@@ -7,9 +7,16 @@ const asia = {
   id: "asia",
   name: "Asia",
   latencyTime: {
+    asia:3000,
+    australia: 5000,
+    europe: 8000,
+    "north-america": 12000,
+    "south-america" :11000
+  },
+    downloadTime: {
     asia:3,
     australia: 5,
-    europa: 8,
+    europe: 8,
     "north-america": 12,
     "south-america" :11
   }
@@ -18,7 +25,14 @@ const europe = {
   id: "europe",
   name: "Europe",
   latencyTime: {
-    europe:3,
+    europe: 3000,
+    australia: 9000,
+    asia: 9000,
+    "north-america": 10000,
+    "south-america": 10000,
+  },
+  downloadTime: {
+    europe: 3,
     australia: 9,
     asia: 9,
     "north-america": 10,
@@ -29,10 +43,17 @@ const northAmerica = {
   id: "north-america",
   name: "North America",
   latencyTime: {
+    australia: 12000,
+    asia: 12000,
+    europe: 8000,
+    "north-america": 3000,
+    "south-america": 5000,
+  },
+  downloadTime: {
     australia: 12,
     asia: 12,
     europe: 8,
-    "north-america":3,
+    "north-america": 3,
     "south-america": 5,
   },
 };
@@ -40,6 +61,13 @@ const southAmerica = {
   id: "south-america",
   name: "South America",
   latencyTime: {
+    australia: 12000,
+    asia: 12000,
+    europe: 8000,
+    "north-america": 5000,
+    "south-america": 3000,
+  },
+  downloadTime: {
     australia: 12,
     asia: 12,
     europe: 8,
