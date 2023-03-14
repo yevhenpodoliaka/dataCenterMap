@@ -11,7 +11,6 @@ export default function chooseDataCenter(e) {
     if (current !== null) {
       e.target.setAttribute("data-status", "new");
       e.target.innerHTML = dataCenterMarkup("new");
-      e.target.style.width = "50px";
       GLOBAL_STATE.addNewDataCenter(e.target.dataset.location);
 
       if (GLOBAL_STATE.newDataCenter.length === 2) {
@@ -26,7 +25,6 @@ export default function chooseDataCenter(e) {
     } else {
       e.target.setAttribute("data-status", "current");
       e.target.innerHTML = dataCenterMarkup("current");
-      e.target.style.width = "50px";
       refs.message.textContent =
         "Choose minimum two additional spots for Byte Cloud and press";
       refs.nextBtn.classList.remove("visually-hidden");

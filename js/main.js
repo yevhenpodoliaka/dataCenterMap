@@ -1,9 +1,10 @@
 import refs from "./refs.js";
 import chooseNumberUsers from "./handler/chooseNumberUsers.js";
 
+
+document.addEventListener("DOMContentLoaded",  () =>{
 refs.map.addEventListener("click", chooseNumberUsers);
-
-
+});
 const oceania = {
   id: "oceania",
   name: "Oceania",

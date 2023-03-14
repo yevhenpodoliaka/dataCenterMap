@@ -1,15 +1,6 @@
 export default function dataCenterMarkup(status) {
-  if (status === "current") {
-    return `
-
-        <img src= "./img/server.png">
-
-    `;
-  } else {
-    return `
- 
-       <img src="./img/server_ByteCloud.png" alt="current Server">
-
-    `;
-  }
+  return status === "current"
+    ? `<img src= "./img/server.png"alt="current Server">`
+    : ` <img src="./img/server_ByteCloud.png" alt="new Server">`;
 }
+
