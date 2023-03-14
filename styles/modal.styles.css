@@ -1,5 +1,5 @@
 .backdrop {
-  z-index: 10;
+  z-index: 20;
   position: absolute;
   top: 0;
   left: 0;
@@ -23,43 +23,56 @@
 position: absolute;
 top: -25px;
 left: 100px;
-width: 300px;
+width: 220px;
   color: white;
   display:inline-block;
 }
 .resetBtn{
-  position: absolute;
+position: absolute;
 top: -30px;
 left:340px;
-  background-color: blue;
-  color: white;
+width: 48px;
+padding: 4px;
   border: none;
   border-radius: 4px;
+  color: black;
+  background-color: darkgray;
 }
+
+.resetBtn:hover,
+.resetBtn:focus-visible{
+  background-color: blue;
+  color: white;
+}
+
+
 
 .card table:not(:last-child){
     margin-bottom: 8px;
 }
 .title{
   background-color: rgba(242, 242, 242, 0.75); 
+   border: 1px solid black;
   color: blue;
   text-transform: uppercase;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 4px;
 }
 table{
   width: 300px;
-  border: 2px solid orange;
+  border: 1px solid black;
 
 }
 
 th{
   padding: 6px;
-  background-color: rgba(242, 242, 242, 0.75); 
+  background-color: rgba(242, 242, 242, 0.85); 
 }
 
 td{
   text-align: center;
   padding: 4px;
- border: 2px solid orange;
    background-color: rgba(242, 242, 242, 0.75); 
 }
 .stars{
@@ -68,7 +81,7 @@ td{
   justify-content: center;
   gap: 4px;
 }
-.full-star{
+.star{
 width: 17px;
 height: 17px;
 }

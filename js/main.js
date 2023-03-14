@@ -15,11 +15,11 @@ const oceania = {
     "south-america" :11000
   },
     downloadTime: {
-    asia:3,
-    australia: 5,
-    europe: 8,
-    "north-america": 12,
-    "south-america" :11
+    asia:10000,
+    australia: 11000,
+    europe: 36000,
+    "north-america": 46000,
+    "south-america" :52000,
   }
 };
 const europe = {
@@ -33,11 +33,11 @@ const europe = {
     "south-america": 10000,
   },
   downloadTime: {
-    europe: 3,
-    australia: 9,
-    asia: 9,
-    "north-america": 10,
-    "south-america": 10,
+    europe: 10000,
+    australia: 14000,
+    asia: 12000,
+    "north-america": 26000,
+    "south-america": 36000,
   },
 };
 const northAmerica = {
@@ -51,11 +51,11 @@ const northAmerica = {
     "south-america": 5000,
   },
   downloadTime: {
-    australia: 12,
-    asia: 12,
-    europe: 8,
-    "north-america": 3,
-    "south-america": 5,
+    australia: 31000,
+    asia: 37000,
+    europe: 26000,
+    "north-america": 10000,
+    "south-america": 15000,
   },
 };
 const southAmerica = {
@@ -69,11 +69,11 @@ const southAmerica = {
     "south-america": 3000,
   },
   downloadTime: {
-    australia: 12,
-    asia: 12,
-    europe: 8,
-    "north-america": 5,
-    "south-america": 3,
+    australia: 38000,
+    asia: 48000,
+    europe: 16000,
+    "north-america": 15000,
+    "south-america": 10000,
   },
 };
 

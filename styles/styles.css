@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.canvas-wrap{
+  position: relative;
+}
 #canvas {
   pointer-events: none;
 }
@@ -35,22 +38,37 @@ img {
 }
 
 .info {
-  width: 1000px;
-  margin: 0 auto;
+  z-index: 15;
+  position: absolute;
+  top: 0;
+  left:100px;
   display: flex;
   align-items: center;
   gap: 15px;
+  height: 35px;
+  padding: 4px;
 }
 
 #message {
-  color: white;
-  padding: 15px;
+  color: black;
+
 }
-button {
+#next{
   width: 50px;
   height: 25px;
   border: none;
   border-radius: 4px;
+  color: black;
+  background-color: darkgray;
+}
+#next:disabled{
+  background-color: hsla(0, 0%, 50%, 0.2);
+  color: white;
+}
+#next:hover:enabled,
+#next:focus-visible{
+  background-color: blue;
+  color: white;
 }
 #map {
   margin: 0 auto;

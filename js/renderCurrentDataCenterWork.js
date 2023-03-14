@@ -31,7 +31,7 @@ export default function renderCurrentDataCenterWork() {
 
 
     document.querySelectorAll(".info-card").forEach(
-    (i) =>(i.textContent = `Latency :${
+    (i) =>(i.textContent = `Latency: ${
         currentDataCenter.latencyTime[i.parentNode.getAttribute("id")] / 1000
       } sec.`)
   )
@@ -41,7 +41,7 @@ export default function renderCurrentDataCenterWork() {
           .querySelectorAll(".info-card")
           .forEach(
             (i) =>
-              (i.textContent = `Download :${
+              (i.textContent = `Download: ${
                 currentDataCenter.downloadTime[i.parentNode.getAttribute("id")] /
                 1000
               } sec.`)

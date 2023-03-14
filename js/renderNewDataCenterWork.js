@@ -34,12 +34,12 @@ export default function renderNewDataCenterWork(from, to) {
 
   document
     .querySelector(`#${to}`)
-    .insertAdjacentHTML("beforeend", infoCardMarkup(`Latency ${latencyTime[to]} sec.`));
+    .insertAdjacentHTML("beforeend", infoCardMarkup(`Latency: ${latencyTime[to]/1000} sec.`));
   
   setTimeout(() => {
      document.querySelector(
        `#${to} .info-card`
-     ).textContent = `Download ${downloadTime[to]} sec.`;
+     ).textContent = `Download:  ${downloadTime[to]/1000} sec.`;
   }, latencyTime[to]/2);
   
 
