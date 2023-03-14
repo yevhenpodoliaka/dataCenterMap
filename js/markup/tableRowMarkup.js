@@ -1,19 +1,49 @@
-function random(min, max) {
-  return Math.random() * (max - min) + min;
-}
+
+const fullStar = `<div class="full-star"><img  src="./img/circle_empty.png" alt="server location"></div> `;
+
+const results = {
+  europe: {
+    name: "Europe",
+    latencyTime: 8,
+    downloadTime: 12,
+    streaming: "4K, 2160p UHD",
+    stars: `${fullStar + fullStar + fullStar + fullStar + fullStar}`,
+  },
+  australia: {
+    name: "Australia",
+    latencyTime: 8,
+    downloadTime: 12,
+    streaming: "4K, 2160p UHD",
+    stars: `${fullStar + fullStar + fullStar + fullStar + fullStar}`,
+  },
+  asia: {
+    name: "Asia",
+    latencyTime: 8,
+    downloadTime: 12,
+    streaming: "4K, 2160p UHD",
+    stars: `${fullStar + fullStar + fullStar + fullStar + fullStar}`,
+  },
+  "north-america": {
+    name: "North America",
+    latencyTime: 8,
+    downloadTime: 12,
+    streaming: "4K, 2160p UHD",
+    stars: `${fullStar + fullStar + fullStar + fullStar + fullStar}`,
+  },
+  "south-america": {
+    name: "South America",
+    latencyTime: 8,
+    downloadTime: 12,
+    streaming: "4K, 2160p UHD",
+    stars: `${fullStar + fullStar + fullStar + fullStar + fullStar}`,
+  },
+};
 
 export default function tableRowMarkup(continent) {
-    const streamingArr = ["4K, 2160p UHD", "1080, FullHD"];
-
-    const latencyTime = random(5, 25).toFixed(2);
-    const downloadTime = random(8, 25).toFixed(2);
-    const streaming = streamingArr[Math.floor(random(1, 2))];
-
-
-    return `  <table>
+  return `  <table>
           <tr>
-            <th colspan="2">${continent}</th>
-            <th>5stars</th>
+            <th colspan="2">${results[continent].name}</th>
+            <th class="stars">${results[continent].stars}</th>
           </tr>
           <tr>
             <td>Latency</td>
@@ -21,9 +51,9 @@ export default function tableRowMarkup(continent) {
             <td>streaming</td>
           </tr>
           <tr>
-            <td>${latencyTime}</td>
-            <td>${downloadTime}</td>
-            <td>${streaming}</td>
+            <td>${results[continent].latencyTime}</td>
+            <td>${results[continent].downloadTime}</td>
+            <td>${results[continent].streaming}</td>
           </tr>
         </table>`;
 }

@@ -3,6 +3,7 @@ import drawParabola from "./helpers/drawParabola.js";
 import { GLOBAL_STATE } from "./main.js";
 import animationLatency from "./helpers/animation.js";
 import resultTableMarkup from "./markup/resultTableMarkup.js";
+import chooseDataCenter from "./handler/chooseDataCenter.js";
 
 
 export default function renderCurrentDataCenterWork() {
@@ -54,7 +55,7 @@ export default function renderCurrentDataCenterWork() {
 
   setTimeout(() => {
     document
-      .querySelector("body")
+      .querySelector("#map")
       .insertAdjacentHTML("beforeend", resultTableMarkup());
     const resetBtn = document.querySelector(".resetBtn");
     resetBtn.addEventListener("click", () => document.location.reload());

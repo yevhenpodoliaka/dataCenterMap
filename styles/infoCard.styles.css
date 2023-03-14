@@ -4,22 +4,22 @@
   background-color: #f1f1f1;
 }
 #north-america .info-card {
-  top: 120px;
-  left: 20px;
+  top: 100px;
+  left: -35px;
 }
 #europe .info-card {
-  top: 75px;
-  left: 50px;
+  top: -15px;
+  left: 40px;
 }
 #asia .info-card {
-  top: 115px;
-  left: 20px;
+  top: 40px;
+  left: 95px;
 }
 #south-america .info-card {
   top: 70px;
-  left: -50px;
+  left: -130px;
 }
 #australia .info-card {
-  top: 95px;
-  left: -5px;
+  top: 90px;
+  left: -135px;
 }

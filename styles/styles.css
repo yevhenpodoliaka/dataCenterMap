@@ -57,7 +57,7 @@ button {
   width: 1000px;
   height: 600px;
   position: relative;
-  background-image: url("./img/map.png");
+  background-image: url("../img/map.png");
   background-size: contain;
 
   display: flex;

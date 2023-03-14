@@ -1,5 +1,6 @@
 import { GLOBAL_STATE } from "./main.js";
 import { ctx } from "./helpers/drawParabola.js";
+import chooseDataCenter from "./handler/chooseDataCenter.js";
 import renderCurrentDataCenterWork from "./renderCurrentDataCenterWork.js";
 import renderNewDataCenterWork from "./renderNewDataCenterWork.js";
 import refs from "./refs.js";
@@ -7,7 +8,8 @@ import refs from "./refs.js";
 export default function renderDataCentresWork() {
   const { users } = GLOBAL_STATE;
   refs.message.style.opacity=0
-  refs.nextBtn.style.opacity=0
+  refs.nextBtn.style.opacity = 0
+  refs.map.removeEventListener("click", chooseDataCenter);
     if (
       users.includes("asia") &&
       document.querySelector("[data-location='oceania']")

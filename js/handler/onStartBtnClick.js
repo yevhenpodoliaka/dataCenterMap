@@ -8,6 +8,7 @@ export default function onStartBtnClick() {
       .find((i) => !i.dataset.status)
       .remove();
     renderDataCentersWork();
+    refs.map.removeEventListener("click", chooseNumberUsers);
     refs.nextBtn.removeEventListener("click", onStartBtnClick);
     refs.nextBtn.disabled = true;
   }
